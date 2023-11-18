@@ -1,8 +1,8 @@
 import cohere
 import streamlit as st
 
-cohere_api_key = ''
-cohere_model_id = ''
+co = cohere.Client(os.getenv('COHERE_API_KEY'))
+cohere_model_id = 'command-nightly'
 
 def generate_ans(qstn):
 
